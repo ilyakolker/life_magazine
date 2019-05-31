@@ -23,21 +23,22 @@
         }
 
         body {
+            width: 100%;
+            height: 100%;
             margin: 0;
             padding: 0
         }
 
         .image {
             width: 100%;
-            height: 100%
+            height: 90%
         }
 
         .container {
-            height: 565px;
+            height: 100vh;
         }
 
         .logo {
-            margin-top: 7px;
             font-family: 'ruslan';
             font-size: 30pt;
 
@@ -63,8 +64,17 @@
             transform: translate(-50%, -50%);
             text-align: center;
             font-size: 38pt;
+            font-size: 5vw;
             color: red;
         }
+        @media screen and (max-width: 600px) {
+        .hide_small {
+            display: none
+        }
+        .small_logo{
+            font-size: 5vw;
+        }
+    }
         h1{
             width: 100%;
         }
@@ -74,14 +84,13 @@
 <body>
     <div class="container">
         <img src="http://157.242.44.67:80/mjpg/video.mjpg" class="image" alt="">
-    </div>
-    <div class="logo">
-        <span><b>LIF.E MAGAZINE</b>&trade;</span>
-        <span>POWERED BY F.F.F.F&trade;</span>
-        <span class="shop">SHOP</span>    <div class="sentence">
-            <h1>MANIPULATION ON PEOPLE IS NOT LIMITED</h1>
-        </div>
-
+        <div class="logo">
+                <span class="small_logo"><b>F.LIES MAGAZINE</b>&trade;</span>
+                <span class="hide_small">POWERED BY F.F.F.F&trade;</span>
+                <span class="shop">SHOP</span>    
+                <div class="sentence">
+                    <h1>NOTHING IS ORIGINAL</h1>
+                </div>
     </div>
 
     <script>
@@ -93,10 +102,28 @@
             ];
 
             let sent_arry = [
-                'MANIPULATION ON PEOPLE IS NOT LIMITED', 
-                'BUY OR DIE', 
-                'NOTHING IS ORIGINAL'
-                ];
+                 
+                'IT IS WHAT IT IS', 
+                'LIF.E IS LIF.E',
+                'DO SOMETHING',
+                'DO NOTHING',
+                'NOT ALL NEWS ARE NEW',
+                'USE YOUR OWN EYE',
+                'QUASTION EVERYTHING',
+                'MANIPULATION ON PEOPLE IS NOT LIMITED',
+                'EVERYBODY IS ADDICTED TO SOMETHING',
+                'WE ALLREADY ARTIF.ICIELD',
+                'CREATE F.ROM SOMETHING',
+                'CREATE F.ROM NOTHING',
+                'THE BEAUTY EXIST IN IMPERF.ECTION',
+                'WE ARE WHO WE ARE',
+                'WE KNOW THE F.UTURE',
+                'F.REE YOURSELF',
+                'USER MUST LOVE HIS ADDICTION',
+                'USER MUST HATE HIS ADDICTION',
+                'NOTHING IS ORIGINAL',
+                'WE NEVER GONNA DIE',
+                 '' ];
 
         setInterval(function () {
             let image = document.getElementsByTagName('img');
@@ -106,7 +133,7 @@
             num++;
             if (num == img_array.length)
                 num = 0;
-        }, 1000)
+        }, 3000)
     </script>
 </body>
 
